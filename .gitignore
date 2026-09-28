@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+.build/
+build/
+dist/
+wheels/
+*.egg-info
+
+*.key
+*.csr
+*.crt
+*.pfx
+*.pem
+
+.env
+
+# Virtual environments
+.venv
+
+# Releases
+.release*
