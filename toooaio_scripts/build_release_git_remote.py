@@ -190,14 +190,14 @@ def build_release_git_remote(
 
     if release_repo_branch != release_repo.active_branch.name:
         if release_repo_url and release_repo_branch in release_repo.remotes.origin.refs:
-            print(f"Переключение на удаленную ветку {dev_repo.active_branch}")
+            print(f"Переключение на удаленную ветку {release_repo_branch}")
             release_repo.git.switch(release_repo_branch)
             release_repo.active_branch.set_tracking_branch(release_repo.remotes.origin.refs[release_repo_branch])
         elif release_repo_branch in release_repo.heads:
-            print(f"Переключение на локальную ветку {dev_repo.active_branch}")
+            print(f"Переключение на локальную ветку {release_repo_branch}")
             release_repo.git.switch(release_repo_branch)
         else:
-            print(f"Создание новой локальной ветки {dev_repo.active_branch}")
+            print(f"Создание новой локальной ветки {release_repo_branch}")
             release_repo.git.switch("-c", release_repo_branch)
 
     if release_repo.active_branch.is_remote():

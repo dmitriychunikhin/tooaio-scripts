@@ -1,6 +1,6 @@
 [project]
 name = "toooaio-scripts"
-version = "1.0.0"
+version = "1.0.1"
 
 description = """
 Скрипты общего назначения: сборка документации, сборка приложений
